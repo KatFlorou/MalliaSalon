@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html lang="en">   
+    <head>
+        <!-- Metadata -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+        <!-- Link to stylesheet -->
+        <link href="/style.css" rel="stylesheet">
+        <!-- Link JS file -->
+        <script type="module" src="/index.js"></script>
+        <!-- Support differing browsers by attempting to recreate the missing features with polyfills -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <!-- Import fonts -->
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Federo&display=swap');
+        </style>
+
+        <title>Mallia Salon</title>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar_wrapper" >
+            <div class="brand_name">
+                <a href="#introduction">
+                    <img src="/brand5.jpg" alt="Mallia, the salon's brand name">
+                </a>
+            </div>
+            <div class="list_wrapper">
+                <div class="icon_menu">
+                    <a id="menu"> <!--MENU-->
+                        <span class="lines"></span>
+                        <span class="lines"></span>
+                        <span class="lines"></span>
+                    </a>
+                </div>
+                <div>
+                    <ul class="navbar_list">
+                        <li class="space"><a href="#services">Services</a></li>
+                        <li class="space"><a href="#team">Our team</a></li>
+                        <li class="space"><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <!-- Introduction of the hair salon -->
+            <section class="introduction" id="introduction">
+                <div class="salon_intro">
+                    <h1 class="intro_header">MALLIA  S·A·L·O·N</h1>
+                    <img class="salon_pic" src="/salon3.jpg" alt="chairs and mirrors in the salon">
+                    <p>
+                        Welcome to Mallia, the leading high-end hair salon in Bloomfield Hills, Michigan.<br>
+                        Here, we don't consider you as “our client”.<br>
+                        You are our guest! <br>
+                        We want you to feel absolutely pampered by receiving the salon experience you so greatly deserve.
+                    </p>
+                </div>
+            </section>
+            <!-- Elaborating on the services offered -->
+            <section class="services" id="services">
+                <h1 class="services_header">Our Services</h1>
+                <div class="grid_container">
+                    <div class="grid_services">
+                        <h4>Blow-dry</h4>
+                    </div>
+                    <div class="grid_services">
+                        <h4>Hair Cuts</h4>
+                    </div>
+                    <div class="grid_services">
+                        <h4>Hair Coloring</h4>
+                    </div>
+                    <div class="grid_services">
+                        <h4>Perm</h4>
+                    </div>
+                    <div class="grid_services">
+                        <h4>Keratin Treatment</h4>
+                    </div>
+                    <div class="grid_services">
+                        <h4>Straightening</h4>
+                    </div>
+                </div>
+                <span class="copyright_photo">&copy; Photo by Nataliya Vaitkevich on Pexels</span>
+            </section>
+            <!-- Presentation of the team -->
+            <section class="team" id="team">
+                <h1 class="team_header">Our Stylists</h1>
+                <div class="team_member">
+                    <div class="presentation start" id="bgc">
+                        <p>
+                            Our well-trained, experienced stylists have been your partners in "hair"
+                            for more then 20 years each, some even more.
+                            With attention to fashion and new trends, they will gently guide you on your quest to
+                            highlighting your best features and hide (if any) imperfections.
+                        </p>
+                    </div>
+                </div>
+                <div class="team_member" >
+                    <div class="presentation" id="careers">
+                        <h3>Come and work with us</h3>
+                        <p>If you would like to join our team </p>
+                        <p>please check our</p>
+                        <button id="jobs" class="button"> open positions </button>
+                    </div>
+                </div>
+                <!--Modal Careers-->
+                <div id="careers_modal" class="modal_careers">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span id="close">&times;</span>
+                        <h2>··· Become a part of our team ···</h2>
+                        <p class="modal_p">
+                            We are always looking for motivated professionals. <br>
+                            If you are interested in joining our team as a hairstylist or assistant,
+                            please call us at 248 5158575 to book an interview. <br>
+                            Booth rental or comission possible.
+                        </p>
+                    </div>
+                </div>
+                <span class="copyright_photo">&copy; Photo by Adam Winger on Unsplash</span>
+            </section>
+            <!-- Contact -->
+            <section class="contact" id="contact">
+                <h1 class="contact_message">Get in touch</h1>
+                <div class="address">
+                    <div class="contact_info">
+                        <p>You can find us at:</p>
+                        <p>43165 Woodward Ave</p>
+                        <p>Bloomfield Hills, MI 48302</p>
+                        <p>Tel: 248 8578881</p>
+                    </div>
+                </div >
+                <div class="opening_hours">
+                    <table class="table_hours">
+                        <tr>
+                            <th colspan="2">Opening Hours</th>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>09:00 - 17:00</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>09:00 - 17:00</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>09:00 - 17:00</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>09:00 - 17:00</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>09:00 - 17:00</td>
+                        </tr>
+                    </table>
+                </div>
+                <span class="copyright_photo">&copy; Photo by cottonbro from Pexels</span>
+            </section>
+        </main>
+        <footer class="footer">
+            <p>Copyright &copy; 2022 Mallia Salon</p>
+        </footer>
+    </body>
+</html>

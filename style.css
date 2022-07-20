@@ -1,0 +1,436 @@
+/* Resetting defaults */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;  
+}
+/* Set font for the whole document */
+:root {
+    font-size: clamp(14px, 1.5vw, 28px);
+    line-height: 1.5rem;
+    --navbarBgLight: #CAC7C790;
+    --navbarDark: #333;
+    font-family: 'Federo', sans-serif;
+}
+
+/* /* /* --------------------- Navbar ----------------------- */
+.navbar_wrapper {
+    background-color: var(--navbarDark);
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 1vw;
+    padding-left: 0.5vw;
+    z-index: 10;
+}
+.brand_name {
+    background-color: black;
+    padding: 5px 20px 0px 20px;
+    border-radius: 5px;
+}
+.brand_name img {
+    max-height: 8vh;
+}
+/* dropdown menu for small screens */
+.icon_menu {
+    display: none;
+}
+.navbar_list {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    list-style-type: none;
+    padding-right: 4vw;
+}
+.navbar_list a {
+    text-decoration: none;
+    color: #fff;
+    padding: 15px;
+}
+.navbar_list a:hover {
+    background-color: var(--navbarBgLight);
+    border-radius: 10px;
+    cursor: pointer;
+}
+/* When the screen <= 600px wide, hide all links and display icon_menu*/
+@media screen and (max-width: 600px) {
+    /* Navbar changes */
+    .navbar_wrapper {
+        max-height: 9vh;
+        border-radius: 0 0 10px 10px;
+    }
+    .list_wrapper {
+        align-items: center;
+        gap: 15px;
+    }
+    .brand_name {
+        padding: 0 20px;
+        max-height: 9vh;
+        margin-left: 3px;
+    }
+    .icon_menu {
+        display: flex;
+        position: absolute;
+        top: 2vh;
+        right: 8vw;
+    }
+    .lines {
+        display:block;
+        height: 5px;
+        width: 40px;
+        margin: 6px;
+        background-color: #aaa;
+        border-radius: 10px;
+    }
+    .navbar_list {
+        display: none;
+    }
+    .navbar_list a:hover {
+        background-color: transparent;
+    }
+    .active {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 10vh;
+        background-color: var(--navbarDark);
+        align-items: baseline;
+        gap: 15px;
+        border-radius: 0 0 10px 10px;
+        padding: 15px;
+    }
+}
+
+
+/* /* /* -------- Introduction -------------------- */
+h1 {
+    font-weight: bold;
+    word-spacing: 15px;
+}
+.introduction {
+    height: 100vh;
+}
+.salon_intro {
+    text-align: center;
+    padding-top: 16vh;
+    background:#97969690;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 15% 80%;
+}
+
+.intro_header {
+    padding-bottom: 1%;
+    font-size: 3rem;
+    grid-column-start: span 2;
+}
+.salon_pic {
+    width: 40vw;
+    margin: 0 auto;
+    border: 10px solid black;
+    border-radius: 10px;
+    align-self: center;
+}
+.salon_intro p {
+    text-align: center;
+    align-self: center;
+    padding: 40px 40px 40px 40px;
+    margin-right: 60px;
+    border-radius: 10px;
+    font-size: 2vw;
+    background: #f2f2f390;
+}
+.salon_intro p:hover {
+    transform: scale(1.05, 1.05);
+    box-shadow: 10px 10px 5px black;
+}
+/* When the screen <= 600px wide */
+@media screen and (max-width: 600px) {
+    /* Introduction of the hair salon changes */
+    .salon_intro {
+        display: block;
+        padding-top: 12vh;
+    }
+    .intro_header {
+        padding-bottom: 5%;
+        font-size: 2rem;
+    }
+    .salon_pic {
+        display: block;
+        width: 80vw;
+        margin: 0 auto;
+        border: 10px solid black;
+        border-radius: 10px;
+    }
+    .salon_intro p {
+        padding: 30px 40px;
+        text-align: center;
+        font-size: 1.2rem;
+        background: none;
+        margin-right: 0;
+    }
+    .salon_intro p:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}
+
+/* /* /* Services */
+.services {
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding-top: 14vh;
+    background-color: #bfbfbf;
+    /* Photo by Nataliya Vaitkevich on Pexels */
+    background: url(/Photo_by_Nataliya_Vaitkevich_www.pexels.com.jpg) no-repeat center center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+.services_header {
+    height: 3vh;
+    padding-bottom: 7%;
+}
+.grid_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 6% 6%;
+    justify-items: center;
+    align-items: center;
+    height: 60vh;
+    padding: 0% 10% 0% 10%;
+}
+.grid_services {
+    background-color: #111;
+    text-align: center;
+    color: #aaa;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: grid;
+}
+.grid_services h4 {
+    align-self: center;
+    justify-self: center;
+}
+.grid_services:hover {
+    transform: scale(1.2, 1.2);
+    background-color: #1b1a1a;
+}
+.copyright_photo {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 0.6rem;
+}
+
+/* When the screen <= 600px wide */
+@media screen and (max-width: 600px) {
+    .services {
+        padding-top: 11vh;
+    }
+    .services_header {
+        margin-bottom: 5px;
+    }
+    .grid_container {
+        grid-gap: 3% 3%;
+    }
+    .copyright_photo {
+        font-size: 0.7rem;
+    }
+}
+
+/* /* /* Team */
+.team {
+    height: 100vh;
+    /* Photo by Adam Winger on Unsplash */
+    background: url(/adam-winger-KVVjmb3IIL8-unsplash_2.jpg) no-repeat center center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    text-align: center;
+    padding: 8% 10% 0% 10%;
+    background-color: #a5a4a4;
+    display: grid;
+    align-items: start;
+    justify-content: space-evenly;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20vh 80vh;
+    grid-gap: 20px;
+    position: relative;
+
+}
+.team_header {
+    height: 4vh;
+    grid-column-start: span 2;
+}
+
+.presentation {
+    height: 100%;
+    width: 100%;
+    justify-self: center;
+    align-self: center;
+    border-radius: 10px;
+    padding: 20px;
+}
+.start {
+    align-self: start;
+}
+#bgc {
+    background-color: #57555595;
+}
+#bgc:hover {
+    transform: scale(1.05, 1.05);
+    box-shadow: 10px 10px 5px black;
+}
+.button {
+    background-color: #111;
+    color: white;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+/* When the screen <= 600px wide */
+@media screen and (max-width: 600px) {
+    .team {
+        grid-gap: 0;
+        grid-template-rows: 20vh 40vh 40vh;
+    }
+    .team_header {
+        padding-top: 8vh;
+    }
+    .team_member {
+        grid-column-start: span 2;
+    }
+}
+
+/* /* /* Modal Careers */
+  /* The Modal (background) */
+.modal_careers {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #1d1c1c90;
+  }
+
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #bdbcbd;;
+    margin: 15% auto;
+    padding: 2.5% 5%;
+    border: 1px solid #888;
+    border-radius: 30px;
+    width: 70%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+  .modal_p {
+    padding-top: 10px;
+  }
+
+  /* The Close Button */
+  #close {
+    color: #111;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  #close:hover,
+  #close:focus {
+    color: #111;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  /* When the screen <= 600px wide */
+  @media screen and (max-width: 600px) {
+    .modal_careers {
+        top: 8vh;
+    }
+}
+
+
+/* /* /* Contact */
+.contact {
+    padding: 8% 10% 7% 10%;
+    height: 100vh;
+    /*Photo by cottonbro from Pexels*/
+    background: url(/pexels-cottonbro-7440057_2.jpg) no-repeat center center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 10px;
+    position: relative;
+}
+.contact_message {
+    grid-column-start: span 2;
+    justify-self: center;
+    padding-bottom: 40px;
+}
+.address{
+    justify-self: center;
+    align-self: start;
+    /*margin-top: 90px;*/
+}
+.table_hours {
+    margin: 0 auto;
+    background-color: #80808080;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+/* When the screen <= 600px wide */
+@media screen and (max-width: 600px) {
+    .contact {
+        font-size: 1.2rem;
+        display: block;
+    }
+    .contact_message {
+        padding-top: 8vh;
+        padding-bottom: 20px;
+        text-align: center;
+        font-weight: normal;
+    }
+    .address {
+        padding-bottom: 20px;
+        text-align: center;
+        margin-top: 2vh;
+    }
+    .opening_hours {
+        margin-top: 5vh;
+    }
+
+}
+
+
+/* /* /* Footer */
+.footer {
+    width: 100%;
+    background-color: var(--navbarDark);
+    color:#fff;
+    padding: 5px 0;
+    font-size: 0.6rem;
+    text-align: center;
+}
+
