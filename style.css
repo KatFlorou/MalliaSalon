@@ -14,18 +14,20 @@
 }
 
 /* /* /* --------------------- Navbar ----------------------- */
-.navbar_wrapper {
-    background-color: var(--navbarDark);
+.connector {
     position: fixed;
     top: 0;
+    z-index: 10;
+}
+.navbar_wrapper {
+    background-color: var(--navbarDark);
     width: 100vw;
     min-height: 10vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-right: 1vw;
-    padding-left: 0.5vw;
-    z-index: 10;
+    padding-left: 0.5vw;   
 }
 .brand_name {
     background-color: black;
@@ -55,6 +57,9 @@
     background-color: var(--navbarBgLight);
     border-radius: 10px;
     cursor: pointer;
+}
+.smallScreenMenu {
+    display: none;
 }
 /* When the screen <= 600px wide, hide all links and display icon_menu*/
 @media screen and (max-width: 600px) {
@@ -92,15 +97,20 @@
     .navbar_list a:hover {
         background-color: transparent;
     }
+    .smallScreenMenu {
+        position: relative;
+    }
     .active {
         display: flex;
         flex-direction: column;
-        position: relative;
-        top: 10vh;
+        justify-content: center;
+        align-items: center;
         background-color: var(--navbarDark);
-        align-items: baseline;
+        float:right;
+        width: 35vw;
         gap: 15px;
         border-radius: 0 0 10px 10px;
+        box-shadow: 0 -10px var(--navbarDark);
         padding: 15px;
     }
 }
@@ -201,7 +211,7 @@ h1 {
 }
 .grid_container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 6% 6%;
     justify-items: center;
     align-items: center;
@@ -390,7 +400,10 @@ h1 {
 .address{
     justify-self: center;
     align-self: start;
-    /*margin-top: 90px;*/
+}
+.address a {
+    text-decoration: none;
+    color: inherit;
 }
 .table_hours {
     margin: 0 auto;

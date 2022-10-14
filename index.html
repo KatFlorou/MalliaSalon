@@ -8,44 +8,46 @@
         <meta name="viewport" content="initial-scale=1.0, width=device-width">
         <meta name="author" content="Katerina Florou">
         <meta name="description" content="Mallia is a hair salon in Bloomfield Hills, Michigan">
+        <!-- Import fonts -->
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Federo&display=swap');
+        </style>
         <!-- Link to stylesheet -->
         <link href="/style.css" rel="stylesheet">
         <!-- Link JS file -->
         <script type="module" src="/index.js"></script>
         <!-- Support differing browsers by attempting to recreate the missing features with polyfills -->
         <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-        <!-- Import fonts -->
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Federo&display=swap');
-        </style>
-
         <title>Mallia Salon</title>
     </head>
     <body>
         <!-- Navbar -->
-        <nav class="navbar_wrapper" >
-            <div class="brand_name">
-                <a href="#introduction">
-                    <img src="/brand5.jpg" alt="Mallia, the salon's brand name">
-                </a>
-            </div>
-            <div class="list_wrapper">
-                <div class="icon_menu">
-                    <a id="menu"> <!--MENU-->
-                        <span class="lines"></span>
-                        <span class="lines"></span>
-                        <span class="lines"></span>
+        <div class="connector">
+            <nav class="navbar_wrapper" >
+                <div class="brand_name">
+                    <a href="#introduction">
+                        <img src="/brand5.jpg" alt="Mallia, the salon's brand name">
                     </a>
                 </div>
-                <div>
-                    <ul class="navbar_list">
-                        <li class="space"><a href="#services">Services</a></li>
-                        <li class="space"><a href="#team">Our team</a></li>
-                        <li class="space"><a href="#contact">Contact</a></li>
-                    </ul>
+                <div class="list_wrapper">
+                    <div class="icon_menu">
+                        <a id="menu"> <!--MENU-->
+                            <span class="lines"></span>
+                            <span class="lines"></span>
+                            <span class="lines"></span>
+                        </a>
+                    </div>
+                    <div>
+                        <ul class="navbar_list">
+                            <li class="space"><a href="#services">Services</a></li>
+                            <li class="space"><a href="#team">Our team</a></li>
+                            <li class="space"><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+            <div class="smallScreenMenu navbar_list"></div>
+        </div>
         <main>
             <!-- Introduction of the hair salon -->
             <section class="introduction" id="introduction">
@@ -81,6 +83,12 @@
                     </div>
                     <div class="grid_services">
                         <h4>Straightening</h4>
+                    </div>
+                    <div class="grid_services">
+                        <h4>Extensions</h4>
+                    </div>
+                    <div class="grid_services">
+                        <h4>Wax</h4>
                     </div>
                 </div>
                 <span class="copyright_photo">&copy; Photo by Nataliya Vaitkevich on Pexels</span>
@@ -126,12 +134,14 @@
             <section class="contact" id="contact">
                 <h1 class="contact_message">Get in touch</h1>
                 <div class="address">
-                    <div class="contact_info">
-                        <p>You can find us at:</p>
-                        <p>43165 Woodward Ave</p>
-                        <p>Bloomfield Hills, MI 48302</p>
-                        <p>Tel: 248 8578881</p>
-                    </div>
+                    <a href="https://goo.gl/maps/mKby5RXoFNJBF6hB7" target="_blank" title="See in Google Maps">
+                        <div class="contact_info">
+                            <p>You can find us at:</p>
+                            <p>43165 Woodward Ave</p>
+                            <p>Bloomfield Hills, MI 48302</p>
+                            <p>Tel: 248 8578881</p>
+                        </div>
+                    </a>
                 </div >
                 <div class="opening_hours">
                     <table class="table_hours">
