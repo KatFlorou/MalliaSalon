@@ -199,7 +199,7 @@ h1 {
     padding-top: 14vh;
     background-color: #bfbfbf;
     /* Photo by Nataliya Vaitkevich on Pexels */
-    background: url(/Photo_by_Nataliya_Vaitkevich_www.pexels.com.jpg) no-repeat center center;
+    background: url(/photos/Photo_by_Nataliya_Vaitkevich_www.pexels.com.jpg) no-repeat center center;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -262,7 +262,7 @@ h1 {
 .team {
     height: 100vh;
     /* Photo by Adam Winger on Unsplash */
-    background: url(/adam-winger-KVVjmb3IIL8-unsplash_2.jpg) no-repeat center center;
+    background: url(/photos/adam-winger-KVVjmb3IIL8-unsplash_2.jpg) no-repeat center center;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -381,7 +381,7 @@ h1 {
     padding: 8% 10% 7% 10%;
     height: 100vh;
     /*Photo by cottonbro from Pexels*/
-    background: url(/pexels-cottonbro-7440057_2.jpg) no-repeat center center;
+    background: url(/photos/pexels-cottonbro-7440057_2.jpg) no-repeat center center;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
